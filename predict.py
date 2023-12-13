@@ -10,9 +10,10 @@ st.write(mydata.head())
 # Printing the dataset shape
 st.subheader('Number of Data Shape')
 #target class histogram
- 
+st.header('Observation')
 fig = px.histogram(mydata['Suggested Job Role'])
 st.plotly_chart(fig)
+st.subheader('This histogram looks like bell shaped that is a normal distribution')
 #category value count
 st.subheader('Total values counts of Category Data')
 catlist=mydata.select_dtypes(include=['object']).columns.tolist()
