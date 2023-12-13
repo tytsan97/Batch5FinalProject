@@ -2,16 +2,16 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-st.title('Data Visualization')
+st.title('Prediction My Career project')
+st.header('Data Visualization')
 
-st.write('Prediction My Career project')
-mydata = pd.read_csv(r'C:\Users\Dell\Documents\tytsan\batch5\career.csv')
 
-mydata
+mydata = pd.read_csv(r'career.csv')
+
+st.write(mydata.head())
 # Printing the dataset shape
 st.subheader('Number of Data Shape')
-mydata.shape
-
+st.write(mydata.shape)
 
 st.subheader('Total values counts of Category Data')
 catlist=mydata.select_dtypes(include=['object']).columns.tolist()
