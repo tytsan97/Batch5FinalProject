@@ -9,8 +9,9 @@ mydata = pd.read_csv('career.csv')
 st.write(mydata.head())
 # Printing the dataset shape
 st.subheader('Number of Data Shape')
-#target class histogram 
-fig = px.histogram(mydata['Suggest Job Roles'])
+#target class histogram
+ 
+fig = px.histogram(mydata['Suggested Job Role'])
 st.plotly_chart(fig)
 #category value count
 st.subheader('Total values counts of Category Data')
