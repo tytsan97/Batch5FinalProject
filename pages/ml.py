@@ -14,7 +14,7 @@ if rfmodel:
         logic_rate=st.slide('Pick a number for Logical Rating',1,9)
         hack_rate = st.slide('Pick a number for hackathons',1,9)
         code_rate = st.slide('Pick a number for coding skills rating',1,9)
-        speak_rate = st.slide('Pick a number for public speaking points,1,9)
+        speak_rate = st.slide('Pick a number for public speaking points',1,9)
         self_learn = st.radio("Self Learning Capability:", ['yes', 'no'])
         extra_course = st.radio("Extra Course:", ['yes', 'no'])
         #agegp = st.selectbox("What's customer Age:", ['youth', 'middle_aged', 'senior'])
