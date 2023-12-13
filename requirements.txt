@@ -1,4 +1,4 @@
-streamlit==1.1*
+streamlit==1.29.0
 matplotlib
 scikit-learn
 pandas
