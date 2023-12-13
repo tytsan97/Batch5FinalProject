@@ -4,14 +4,12 @@ import streamlit as st
 
 st.title('Prediction My Career Project')
 st.header('Data Visualization')
-
-
 mydata = pd.read_csv('career.csv')
 
 st.write(mydata.head())
 # Printing the dataset shape
-st.subheader('Number of Data Shape: ',mydata.shape)
-st.write(mydata.shape)
+st.subheader('Number of Data Shape')
+st.write(mydata.shape[0]+"records"+mydata.shape[1]+"features.")
 
 st.subheader('Total values counts of Category Data')
 catlist=mydata.select_dtypes(include=['object']).columns.tolist()
