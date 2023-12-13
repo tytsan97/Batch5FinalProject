@@ -9,6 +9,10 @@ mydata = pd.read_csv('career.csv')
 st.write(mydata.head())
 # Printing the dataset shape
 st.subheader('Number of Data Shape')
+#target class histogram 
+fig = px.histogram(mydata['Suggest Job Roles'])
+st.plotly_chart(fig)
+#category value count
 st.subheader('Total values counts of Category Data')
 catlist=mydata.select_dtypes(include=['object']).columns.tolist()
 categorical_col = mydata[catlist]
