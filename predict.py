@@ -6,7 +6,7 @@ st.title('Prediction My Career project')
 st.header('Data Visualization')
 
 
-mydata = pd.read_csv(r'career.csv')
+mydata = pd.read_csv('career.csv')
 
 st.write(mydata.head())
 # Printing the dataset shape
