@@ -9,7 +9,7 @@ mydata = pd.read_csv('career.csv')
 st.write(mydata.head())
 # Printing the dataset shape
 st.subheader('Number of Data Shape')
-st.markdown(mydata.shape)
+st.write(mydata.shape)
 
 st.subheader('Total values counts of Category Data')
 catlist=mydata.select_dtypes(include=['object']).columns.tolist()
