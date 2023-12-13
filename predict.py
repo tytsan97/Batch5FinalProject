@@ -10,7 +10,7 @@ mydata = pd.read_csv('career.csv')
 
 st.write(mydata.head())
 # Printing the dataset shape
-st.subheader('Number of Data Shape: ',mydata.shape[0]+'records'+mydata.shape[1]+'features.')
+st.subheader('Number of Data Shape: ',mydata.shape)
 st.write(mydata.shape)
 
 st.subheader('Total values counts of Category Data')
