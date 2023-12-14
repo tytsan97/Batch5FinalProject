@@ -26,10 +26,11 @@ worker = st.radio("Hard or Smart:",['smart worker', 'hard worker'])
 team = st.radio("work in team ever?",['no','yes'])
 mbti = st.radio("Are you Inrovert:",['no','yes'])
 st.write("Your point:",logic_rate,hack_rate,code_rate,speak_rate)
-st.write("You selected:","self="+self_learn +",extra="+extra_course+",certificate="+ certificate+",workshop="+ wshop+ 
-         ",readorwrite="+rw_skill+",memory="+ memory_score +",subject="+like_subj+",career="+like_area+",company="+like_com+
-         ",senior="+takein_snr+",book="+like_book+
-         ",managetech="+mana_tech+"worker="+worker+
-         "team="+team+"mbti="+mbti)
+st.write("You selected:","self = "+self_learn +", extra = "+extra_course+", certificate = "+ certificate+", workshop = "+ wshop+ 
+         ", read or write = "+rw_skill+", memory = "+ memory_score +", subject = "+like_subj+", career = "+like_area+
+         ", company = "+like_com+
+         ", senior = "+takein_snr+",book="+like_book+
+         ", manage or tech = "+mana_tech+", worker = "+worker+
+         ", team = "+team+", mbti = "+mbti)
         
        
