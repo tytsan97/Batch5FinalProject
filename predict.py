@@ -21,11 +21,6 @@ categorical_col = mydata[catlist]
 for i in categorical_col:
     category_df = mydata[i].value_counts()
     st.dataframe(category_df)
+dfchurn=mydata.groupby(['Suggested Job Role'])[['Introvert']].value_counts()
+dfchurn
 
-#Create a heatmap to visualize correlation
-corr_matrix = mydata.apply(lambda x : pd.factorize(x)[0]).corr(method='pearson', min_periods=1)#to convert categorical values in each column of mydata into numerical labels using factorize()
-st.write(corr_matrix)
-
-
-hmap=px.imshow(corr_matrix, text_auto=True)
-st.plotly_chart(hmap)
