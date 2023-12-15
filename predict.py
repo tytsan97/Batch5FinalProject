@@ -23,5 +23,5 @@ for i in categorical_col:
     st.dataframe(category_df)
 dfchurn=mydata.groupby(['Suggested Job Role'])[['Introvert']].value_counts()
 
-fig = px.histogram(dfchurn,x=mydata['Suggested Job Role'])
+fig = px.histogram(dfchurn)
 st.plotly_chart(fig)
