@@ -10,8 +10,8 @@ logic_rate=st.number_input('Pick a number for Logical Rating',1,9)
 hack_rate = st.number_input('Pick a number for hackathons',1,9)
 code_rate = st.number_input('Pick a number for coding skills rating',1,9)
 speak_rate = st.number_input('Pick a number for public speaking points',1,9)
-self_learn = st.radio("Self Learning Capability:Ifyes=1else0", [1,0])
-extra_course = st.radio("Extra Course:", ['yes', 'no'])
+self_learn = st.radio("Self Learning Capability:If yes=1 else 0", [1,0])
+extra_course = st.radio("Extra Course:If yes=1 else 0", [1,0])
 certificate = st.selectbox("Certifications:", ['information security', 'shell programming', 'r programming', 'distro making', 'machine learning', 'full stack', 'hadoop', 'app development', 'python'])
 wshop = st.selectbox("Workshop:", ['testing', 'database security', 'game development', 'data science', 'system designing', 'hacking', 'cloud computing', 'web technologies'])
 rw_skill = st.selectbox("Read and Write Skill",['poor', 'excellent', 'medium'])
@@ -19,18 +19,14 @@ memory_score = st.selectbox("Memory capability score:",['poor', 'excellent', 'me
 like_subj = st.selectbox("Interesting Subjects:",data['Interested subjects'].unique())
 like_area = st.selectbox("Interesting Career Area:",['testing', 'system developer', 'Business process analyst', 'security', 'developer', 'cloud computing'])
 like_com = st.selectbox("Type of company want to settle in:",['BPA', 'Cloud Services', 'product development', 'Testing and Maintainance Services', 'SAaS services', 'Web Services', 'Finance', 'Sales and Marketing', 'Product based', 'Service Based'])
-takein_snr = st.radio("Taken inputs from seniors or elders:",['no','yes'])
+takein_snr = st.radio("Taken inputs from seniors or elders:If yes=1 else 0",[1,0])
 like_book = st.selectbox("Interesting type of book:",data['Interested Type of Books'].unique())
 mana_tech = st.radio("Tech or Manage:",['Management','Technical'])
 worker = st.radio("Hard or Smart:",['smart worker', 'hard worker'])
-team = st.radio("work in team ever?",['no','yes'])
-mbti = st.radio("Are you Inrovert:",['no','yes'])
+team = st.radio("work in team ever?if yes choice 1",[1,0])
+mbti = st.radio("Are you Inrovert:if yes choice 1",[1,0])
 st.write("Your Logic, Hackaton, Coding Skill and Public Speaking points:",logic_rate,hack_rate,code_rate,speak_rate)
-st.write("Your selected:","self = "+self_learn +", extra = "+extra_course+", certificate = "+ certificate+", workshop = "+ wshop+ 
-         ", read or write = "+rw_skill+", memory = "+ memory_score +", subject = "+like_subj+", career = "+like_area+
-         ", company = "+like_com+
-         ", senior = "+takein_snr+",book="+like_book+
-         ", manage or tech = "+mana_tech+", worker = "+worker+
-         ", team = "+team+", mbti = "+mbti)
+st.write("Your selected:",self_learn , extra , certificate , workshop,rw_skill,memory_score,like_subj,like_area,like_com,
+         takein_snr,like_book,+mana_tech,worker,team,mbti)
         
        
