@@ -12,7 +12,7 @@ code_rate = st.number_input('Pick a number for coding skills rating',1,9)
 speak_rate = st.number_input('Pick a number for public speaking points',1,9)
 self_learn = st.radio("Self Learning Capability:If yes=1 else 0", [1,0])
 extra_course = st.radio("Extra Course:If yes=1 else 0", [1,0]) 
-certificate = st.selectbox("Certificate:",[0,1,2,3,4,5,6,7,8]
+certificate = st.selectbox("Certificate:",[0,1,2,3,4,5,6,7,8])
 wshop = st.selectbox("Workshop:", [0,1,2,3,4,5,6,7])
 rw_skill = st.radio("Read and Write Skill Excellent=0,Medium=1,Poor=2", [0,1,2])
 memory_score = st.radio("Memory capability Excellent=0,Medium=1,Poor=2",[0,1,2])
