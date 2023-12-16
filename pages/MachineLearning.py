@@ -48,7 +48,7 @@ elif rdwe == "Medium":
          new_rdwe = 1
 else:
          new_rdwe = 2
-st.write(new_rde)
+st.write(new_rdwe)
 memo = st.selectbox("Memory Capability Skill", ['Excellent','Medium','Poor'])
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
 #new_certi = certi.astype('category').cat.codes
