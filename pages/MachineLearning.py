@@ -13,10 +13,34 @@ speak_rate = st.number_input('Pick a number for public speaking points',1,9)
 
 self_learn = st.radio("Self Learning Capability:", ['yes', 'no'])
 if self_learn == "yes":
-         cleanup_self = 1
+         new_self = 1
 else :
-         cleanup_self = 0
-st.write(cleanup_self)
+         new_self = 0
+st.write(new_self)
+extra = st.radio("Extra Course:",['yes', 'no'])
+if extra == "yes":
+         new_extra = 1
+else :
+         new_extra = 0
+st.write(new_extra)
+snrinput = st.radio("Take in input from senior",['yes','no'])
+if snrinput == "yes":
+         new_snrin = 1
+else :
+         new_snrin = 0
+st.write(new_snrin)
+team = st.radio("Work team in ever?",['yes','no'])
+if team == "yes":
+         new_team = 1
+else :
+         new_team = 0
+st.write(new_team)
+mbti = st.radio("Are you introverted",['yes','no'])
+if mbti == "yes":
+         new_mbti = 1
+else :
+         new_mbti = 0
+st.write(new_mbti)
 #self_learn = st.number_input("Self Learning Capability:If yes=1 else 0", 0,1)
 #extra = st.number_input("Extra Course:If yes=1 else 0", 0,1) 
 #certificate = st.number_input("Certificate:",0,8)
