@@ -57,6 +57,18 @@ elif memo == "Medium":
 else:
          new_memo = 2
 st.write(new_memo)
+metl = st.radio("Choice Management or Technical",['Management', 'Technical']) 
+if metl == 'Management':
+         new_metl = 0
+else:
+         new_metl = 1
+st.write(new_metl)
+work = st.radio("Choice Smart or Hard",['Smart Worker','Hard Worker'])
+if work == 'Smart Worker':
+         new_work = 0
+else:
+         new_work = 1
+st.write(new_work)
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
 #new_certi = certi.astype('category').cat.codes
 st.write(certi)
