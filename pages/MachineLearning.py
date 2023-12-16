@@ -41,6 +41,15 @@ if mbti == "yes":
 else :
          new_mbti = 0
 st.write(new_mbti)
+rdwe = st.selectbox("Reading or Writing Skill",['Excellent','Medium','Poor'])
+if rdwe == "Excellent":
+         new_rdwe = 0
+elif rdwe == "Medium":
+         new_rdwe = 1
+else:
+         new_rdwe = 2
+st.write(new_rde)
+memo = st.selectbox("Memory Capability Skill", ['Excellent','Medium','Poor'])
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
 #new_certi = certi.astype('category').cat.codes
 st.write(certi)
