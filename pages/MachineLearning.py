@@ -42,8 +42,13 @@ else :
          new_mbti = 0
 st.write(new_mbti)
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
-new_certi = certi.astype('category').cat.codes
+#new_certi = certi.astype('category').cat.codes
 st.write(new_certi)
+wshop = st.selectbox("Workshops",data['workshops'].unique())
+subj = st.selectbox("Interesting Subjects",data['Interested subjects'].unique())
+area = st.selectbox("Interesting Working Area",data['interested career area '].unique())
+comp = st.selectbox("What type of company settle in",data['What type of company want to settle in?'].unique())
+book = st.selectbox("Interesting type of book:",data['Interested Type of Books'].unique())
 #self_learn = st.number_input("Self Learning Capability:If yes=1 else 0", 0,1)
 #extra = st.number_input("Extra Course:If yes=1 else 0", 0,1) 
 #certificate = st.number_input("Certificate:",0,8)
