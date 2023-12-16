@@ -26,7 +26,7 @@ worker = st.number_input("Hard=1 or Smart=0:",0,1)
 team = st.number_input("work in team ever?if yes choice 1",0,1)
 mbti = st.number_input("Are you Inrovert:if yes choice 1",0,1)
 st.write("Your Logic, Hackaton, Coding Skill and Public Speaking points:",logic_rate,hack_rate,code_rate,speak_rate)
-st.write("Your selected:",self_learn,extra,certificate,workshop,rw_skill,memory_score,like_subj,like_area,like_com,
-         takein_snr,like_book,mana_tech,worker,team,mbti)
+st.write("Your selected:",self_learn,extra,certificate,workshop,rw_skill,memory_score,
+         like_subj,like_area,like_com,takein_snr,like_book,mana_tech,worker,team,mbti)
         
        
