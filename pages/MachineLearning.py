@@ -17,7 +17,15 @@ wshop = st.number_input("Workshop:", 0,7)
 rw_skill = st.number_input("Read and Write Skill Excellent=0,Medium=1,Poor=2", 0,2)
 memory_score = st.number_input("Memory capability Excellent=0,Medium=1,Poor=2",0,2)
 like_subj = st.number_input("Interesting Subjects:",0,9)
-st.subheader("Interesting Career Area") 
+st.subheader("Interesting Career Area")
+st.markdown("
+0-Business Process Analyst 
+1-Cloud Computing
+2-Developer
+3-Security
+4-System Developer
+5-Testing
+            ")
 like_area = st.number_input("Interesting Career Area",0,5)
 takein_snr = st.number_input("Take in input from senior IF yes=1 or 0",0,1)
 like_com = st.number_input("Type of company choice",0,9)
