@@ -16,7 +16,7 @@ certificate = st.selectbox("Certificate:",[0,1,2,3,4,5,6,7,8]
 wshop = st.selectbox("Workshop:", [0,1,2,3,4,5,6,7])
 rw_skill = st.radio("Read and Write Skill Excellent=0,Medium=1,Poor=2", [0,1,2])
 memory_score = st.radio("Memory capability Excellent=0,Medium=1,Poor=2",[0,1,2])
-like_subj = st.selectbox("Interesting Subjects:",data['Interested subjects'].unique())
+like_subj = st.number_input("Interesting Subjects:",0,9)
 like_area = st.number_input("Interesting Career Area",0,5)
 like_book = st.number_input('Pick a number code for interested type of book',0,30)
 mana_tech = st.radio("Tech=1 or Manage=0:",[0,1])
