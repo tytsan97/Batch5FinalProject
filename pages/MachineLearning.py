@@ -11,8 +11,10 @@ hack_rate = st.number_input('Pick a number for hackathons',1,9)
 code_rate = st.number_input('Pick a number for coding skills rating',1,9)
 speak_rate = st.number_input('Pick a number for public speaking points',1,9)
 #self_learn = st.number_input("Self Learning Capability:If yes=1 else 0", 0,1)
-cleanup_self = {self_learn: {"yes": 1, "no": 0}}
 self_learn = st.radio("Self Learning Capability:", ['yes', 'no'])
+cleanup_self = {self_learn: {"yes": 1, "no": 0}}
+st.write(cleanup_self)
+
 extra = st.number_input("Extra Course:If yes=1 else 0", 0,1) 
 certificate = st.number_input("Certificate:",0,8)
 wshop = st.number_input("Workshop:", 0,7)
