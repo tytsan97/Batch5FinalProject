@@ -18,8 +18,8 @@ rw_skill = st.number_input("Read and Write Skill Excellent=0,Medium=1,Poor=2", 0
 memory_score = st.number_input("Memory capability Excellent=0,Medium=1,Poor=2",0,2)
 like_subj = st.number_input("Interesting Subjects:",0,9)
 st.subheader("Interesting Career Area")
-st.markdown("0-Business Process Analyst 
-1-Cloud Computing
+st.markdown("0-Business Process Analyst") 
+st.markdown("1-Cloud Computing")
 2-Developer
 3-Security
 4-System Developer
