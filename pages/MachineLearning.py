@@ -20,10 +20,10 @@ like_subj = st.number_input("Interesting Subjects:",0,9)
 st.subheader("Interesting Career Area")
 st.markdown("0-Business Process Analyst") 
 st.markdown("1-Cloud Computing")
-2-Developer
-3-Security
-4-System Developer
-5-Testing")
+st.markdown("2-Developer")
+st.markdown("3-Security")
+st.markdown("4-System Developer")
+st.markdown("5-Testing")
 like_area = st.number_input("Interesting Career Area",0,5)
 takein_snr = st.number_input("Take in input from senior IF yes=1 or 0",0,1)
 like_com = st.number_input("Type of company choice",0,9)
