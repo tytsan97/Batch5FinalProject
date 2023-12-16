@@ -43,7 +43,7 @@ else :
 st.write(new_mbti)
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
 #new_certi = certi.astype('category').cat.codes
-st.write(new_certi)
+st.write(certi)
 wshop = st.selectbox("Workshops",data['workshops'].unique())
 subj = st.selectbox("Interesting Subjects",data['Interested subjects'].unique())
 area = st.selectbox("Interesting Working Area",data['interested career area '].unique())
