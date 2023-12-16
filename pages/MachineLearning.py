@@ -42,7 +42,8 @@ else :
          new_mbti = 0
 st.write(new_mbti)
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
-st.write(certi.astype('category').cat.codes)
+new_certi = certi.astype('category').cat.codes
+st.write(new_certi)
 #self_learn = st.number_input("Self Learning Capability:If yes=1 else 0", 0,1)
 #extra = st.number_input("Extra Course:If yes=1 else 0", 0,1) 
 #certificate = st.number_input("Certificate:",0,8)
