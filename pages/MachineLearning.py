@@ -17,10 +17,8 @@ wshop = st.selectbox("Workshop:", ['testing', 'database security', 'game develop
 rw_skill = st.radio("Read and Write Skill Excellent=0,Medium=1,Poor=2", [0,1,2])
 memory_score = st.radio("Memory capability Excellent=0,Medium=1,Poor=2",[0,1,2])
 like_subj = st.selectbox("Interesting Subjects:",data['Interested subjects'].unique())
-like_area = st.selectbox("Interesting Career Area:",['testing', 'system developer', 'Business process analyst', 'security', 'developer', 'cloud computing'])
-like_com = st.selectbox("Type of company want to settle in:",['BPA', 'Cloud Services', 'product development', 'Testing and Maintainance Services', 'SAaS services', 'Web Services', 'Finance', 'Sales and Marketing', 'Product based', 'Service Based'])
-takein_snr = st.radio("Taken inputs from seniors or elders:If yes=1 else 0",[1,0])
-like_book = st.selectbox("Interesting type of book:",data['Interested Type of Books'].unique())
+like_area = st.selectbox("Interesting Career Area",
+like_book = st.number_input('Pick a number code for interested type of book',0,30)
 mana_tech = st.radio("Tech or Manage:",['Management','Technical'])
 worker = st.radio("Hard or Smart:",['smart worker', 'hard worker'])
 team = st.radio("work in team ever?if yes choice 1",[1,0])
