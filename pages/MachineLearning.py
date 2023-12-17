@@ -130,7 +130,7 @@ inputdata = {'Logical quotient rating': logic_rate,
                           'worked in teams ever?': new_team,
                            'Introvert': new_mbti}
 
-features = pd.DataFrame(inputdata)
+features = pd.DataFrame(inputdata,index=[0])
 st.write(features)
 df = data.select_dtypes(include=['object']).columns.tolist() 
-st.DataFrame(df)
+df
