@@ -4,13 +4,13 @@ import pickle
 from sklearn.model_selection import train_test_split
 rfmodel= st.sidebar.checkbox('Decision Trees')
 data = pd.read_csv('career.csv')
-if rfmodel:    
-    with st.form("my_form1"):        
-         st.title('Classify the new career prediction')
-         st.subheader("Please Choose all features for predicting good result")
-         logic_rate=st.number_input('Pick a number for Logical Rating',1,9)
-         hack_rate = st.number_input('Pick a number for hackathons',1,9)
-         code_rate = st.number_input('Pick a number for coding skills rating',1,9)
+if rfmodel: 
+    with st.form("my_form1"):     
+        st.title('Classify the new career prediction')
+        st.subheader("Please Choose all features for predicting good result")
+        logic_rate=st.number_input('Pick a number for Logical Rating',1,9)
+        hack_rate = st.number_input('Pick a number for hackathons',1,9)
+        code_rate = st.number_input('Pick a number for coding skills rating',1,9)
          speak_rate = st.number_input('Pick a number for public speaking points',1,9)
          self_learn = st.radio("Self Learning Capability:", ['yes', 'no'])
          if self_learn == "yes":
