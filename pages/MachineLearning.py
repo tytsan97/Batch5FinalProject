@@ -10,7 +10,6 @@ logic_rate=st.number_input('Pick a number for Logical Rating',1,9)
 hack_rate = st.number_input('Pick a number for hackathons',1,9)
 code_rate = st.number_input('Pick a number for coding skills rating',1,9)
 speak_rate = st.number_input('Pick a number for public speaking points',1,9)
-
 self_learn = st.radio("Self Learning Capability:", ['yes', 'no'])
 if self_learn == "yes":
          new_self = 1
@@ -100,7 +99,24 @@ book = st.selectbox("Interesting type of book:",data['Interested Type of Books']
 #worker = st.number_input("Hard=1 or Smart=0:",0,1)
 #team = st.number_input("work in team ever?if yes choice 1",0,1)
 #mbti = st.number_input("Are you Inrovert:if yes choice 1",0,1)
-st.write("Your Logic, Hackaton, Coding Skill and Public Speaking points:",logic_rate,hack_rate,code_rate,speak_rate)
-#st.write(self_learn,extra,certificate,wshop,rw_skill,memory_score,like_subj,like_area,like_com,takein_snr,like_book,mana_tech,worker,team,mbti)
-        
-       
+inputdata = {'Logical quotient rating': logic_rate,
+                        'hackathons': hack_rate, 
+                        'code_rate': income,
+                        'coding skills rating': code_rate,
+                        'public speaking points': speak_rate,
+                        'self-learning capability?': new_self,
+                        'Extra-courses did': new_extra,
+                        'certifications_code': certi,
+                        'workshops_code': wshop,
+                        'reading and writing skills': new_rdwe,
+                        'memory capability score': new_memo,
+                        'Interested subjects_code': subj,
+                        'interested career area _code': area,
+                        'Type of Companay want to settle in?':comp,
+                        'Interested Type of Books_code': book,
+                        'Management or Technical': new_metl,
+                         'hard/smart worker': new_work,
+                          'worked in teams ever?': new_team,
+                           'Introvert': new_mbti}
+features = pd.DataFrame(inputdata, index=[0])
+st.wrtie(features)
