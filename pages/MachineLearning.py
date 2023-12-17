@@ -101,7 +101,7 @@ book = st.selectbox("Interesting type of book:",data['Interested Type of Books']
 #mbti = st.number_input("Are you Inrovert:if yes choice 1",0,1)
 inputdata = {'Logical quotient rating': logic_rate,
                         'hackathons': hack_rate, 
-                        'code_rate': income,
+                        
                         'coding skills rating': code_rate,
                         'public speaking points': speak_rate,
                         'self-learning capability?': new_self,
