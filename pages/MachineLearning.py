@@ -121,4 +121,7 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             X_train, X_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
+            pick_model = pickle.load(open('model.pkl', 'rb'))
+            suggest=pick_model.predict(features)
+            st.write("Your suggested job role is",suggest)
          
