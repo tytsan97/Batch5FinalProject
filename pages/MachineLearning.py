@@ -69,39 +69,18 @@ else:
          new_work = 1
 st.write(new_work)
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
-#new_certi = certi.astype('category').cat.codes
-st.write(certi)
+data['Suggested Job Role']=data['Suggested Job Role'].astype('category')
+d=dict(enumerate(data['Suggested Job Role'].cat.categories))
+
+st.write(d)
 wshop = st.selectbox("Workshops",data['workshops'].unique())
 subj = st.selectbox("Interesting Subjects",data['Interested subjects'].unique())
 area = st.selectbox("Interesting Working Area",data['interested career area '].unique())
 comp = st.selectbox("What type of company settle in",data['Type of company want to settle in?'].unique())
 book = st.selectbox("Interesting type of book:",data['Interested Type of Books'].unique())
-#self_learn = st.number_input("Self Learning Capability:If yes=1 else 0", 0,1)
-#extra = st.number_input("Extra Course:If yes=1 else 0", 0,1) 
-#certificate = st.number_input("Certificate:",0,8)
-#wshop = st.number_input("Workshop:", 0,7)
-#rw_skill = st.number_input("Read and Write Skill Excellent=0,Medium=1,Poor=2", 0,2)
-#memory_score = st.number_input("Memory capability Excellent=0,Medium=1,Poor=2",0,2)
-#like_subj = st.number_input("Interesting Subjects:",0,9)
-#st.subheader("Interesting Career Area")
-#st.markdown("0-Business Process Analyst") 
-#st.markdown("1-Cloud Computing")
-#st.markdown("2-Developer")
-#st.markdown("3-Security")
-#st.markdown("4-System Developer")
-#st.markdown("5-Testing")
-#like_area = st.number_input("Interesting Career Area",0,5)
-#takein_snr = st.number_input("Take in input from senior IF yes=1 or 0",0,1)
-#like_com = st.number_input("Type of company choice",0,9)
-#like_book = st.number_input('Pick a number code for interested type of book',0,30)
-#like_book = st.selectbox("Interesting type of book:",data['Interested Type of Books'].unique())
-#mana_tech = st.number_input("Tech=1 or Manage=0:",0,1)
-#worker = st.number_input("Hard=1 or Smart=0:",0,1)
-#team = st.number_input("work in team ever?if yes choice 1",0,1)
-#mbti = st.number_input("Are you Inrovert:if yes choice 1",0,1)
+
 inputdata = {'Logical quotient rating': logic_rate,
-                        'hackathons': hack_rate, 
-                        
+                        'hackathons': hack_rate,                         
                         'coding skills rating': code_rate,
                         'public speaking points': speak_rate,
                         'self-learning capability?': new_self,
@@ -113,10 +92,12 @@ inputdata = {'Logical quotient rating': logic_rate,
                         'Interested subjects_code': subj,
                         'interested career area _code': area,
                         'Type of Companay want to settle in?':comp,
+                        'Taken inputs from seniors or elders':new_snrin,
                         'Interested Type of Books_code': book,
                         'Management or Technical': new_metl,
                          'hard/smart worker': new_work,
                           'worked in teams ever?': new_team,
                            'Introvert': new_mbti}
+
 features = pd.DataFrame(inputdata, index=[0])
-st.wrtie(features)
+st.write(features)
