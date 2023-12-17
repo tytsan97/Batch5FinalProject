@@ -76,11 +76,40 @@ for key,value in d.items():
         new_certi=key
 st.write(new_certi)
 wshop = st.selectbox("Workshops",data['workshops'].unique())
+data['workshops']=data['workshops'].astype('category')
+w=dict(enumerate(data['workshops'].cat.categories))
+for key,value in w.items():
+    if value == wshop:
+        new_wshop=key
+st.write(new_wshop)
 subj = st.selectbox("Interesting Subjects",data['Interested subjects'].unique())
+data['Interested subjects']=data['Interested subjects'].astype('category')
+s=dict(enumerate(data['Interested subjects'].cat.categories))
+for key,value in s.items():
+    if value == subj:
+        new_subj=key
+st.write(new_subj)
 area = st.selectbox("Interesting Working Area",data['interested career area '].unique())
+data['interested career area ']=data['interested career area '].astype('category')
+a=dict(enumerate(data['interested career area '].cat.categories))
+for key,value in a.items():
+    if value == area:
+        new_area=key
+st.write(new_area)
 comp = st.selectbox("What type of company settle in",data['Type of company want to settle in?'].unique())
+data['Type of company want to settle in?']=data['Type of company want to settle in?'].astype('category')
+c=dict(enumerate(data['Type of company want to settle in?'].cat.categories))
+for key,value in c.items():
+    if value == comp:
+        new_comp=key
+st.write(new_comp)
 book = st.selectbox("Interesting type of book:",data['Interested Type of Books'].unique())
-
+data['Interested Type of Books']=data['Interested Type of Books'].astype('category')
+b=dict(enumerate(data['Interested Type of Books'].cat.categories))
+for key,value in b.items():
+    if value == book:
+        new_book=key
+st.write(new_book)
 inputdata = {'Logical quotient rating': logic_rate,
                         'hackathons': hack_rate,                         
                         'coding skills rating': code_rate,
@@ -88,12 +117,12 @@ inputdata = {'Logical quotient rating': logic_rate,
                         'self-learning capability?': new_self,
                         'Extra-courses did': new_extra,
                         'certifications_code': new_certi,
-                        'workshops_code': wshop,
+                        'workshops_code': new_wshop,
                         'reading and writing skills': new_rdwe,
                         'memory capability score': new_memo,
-                        'Interested subjects_code': subj,
-                        'interested career area _code': area,
-                        'Type of Companay want to settle in?':comp,
+                        'Interested subjects_code': new_subj,
+                        'interested career area _code': new_area,
+                        'Type of Companay want to settle in?':new_comp,
                         'Taken inputs from seniors or elders':new_snrin,
                         'Interested Type of Books_code': book,
                         'Management or Technical': new_metl,
