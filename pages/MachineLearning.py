@@ -71,8 +71,10 @@ st.write(new_work)
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
 data['Suggested Job Role']=data['Suggested Job Role'].astype('category')
 d=dict(enumerate(data['Suggested Job Role'].cat.categories))
-
-st.write(d)
+for i,j in d:
+         if j == certi:
+                  test = i
+st.write(test)
 wshop = st.selectbox("Workshops",data['workshops'].unique())
 subj = st.selectbox("Interesting Subjects",data['Interested subjects'].unique())
 area = st.selectbox("Interesting Working Area",data['interested career area '].unique())
