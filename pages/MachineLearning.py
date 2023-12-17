@@ -132,7 +132,7 @@ inputdata = {'Logical quotient rating': logic_rate,
 
 features = pd.DataFrame(inputdata,index=[0])
 st.write(features)
-catlist = data.select_dtypes(include=['object']).columns.tolist() 
+catlist = data.select_dtypes(include=['object']).columns
 st.write(catlist)
 st.write(data.info())
 st.write(data.columns)
