@@ -72,7 +72,7 @@ certi = st.selectbox("Certificate",data['certifications'].unique())
 data['Suggested Job Role']=data['Suggested Job Role'].astype('category')
 d=dict(enumerate(data['Suggested Job Role'].cat.categories))
 for key,value in d.items():
-    if value == i:
+    if value == certi:
         new_certi=key
          
 st.write(new_certi)
