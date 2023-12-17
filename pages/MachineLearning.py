@@ -137,7 +137,7 @@ y=data["Suggested Job Role"]
 st.write(x)
 st.write(y)
 col=x.select_dtypes(include=['object']).columns.tolist()
-for i in data[col]:
+for i in x[col]:
          x[i]=x[i].astype('category').cat.codes
 
 scol=x['certifications',
