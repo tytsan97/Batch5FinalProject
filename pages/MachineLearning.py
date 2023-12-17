@@ -136,4 +136,8 @@ x=data.drop("Suggested Job Role",axis=1)
 y=data["Suggested Job Role"]
 st.write(x)
 st.write(y)
-st.write(x.select_dtypes(include=['object']).columns)
+col=x.select_dtypes(include=['object']).columns.tolist()
+for i in data[col]:
+         x[i]=x[i].astype('category').cat.codes
+
+st.write(x)
