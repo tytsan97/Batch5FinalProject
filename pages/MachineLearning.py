@@ -134,6 +134,21 @@ features = pd.DataFrame(inputdata,index=[0])
 st.write(features)
 x=data.drop("Suggested Job Role",axis=1)
 y=data["Suggested Job Role"]
+cols= ['self-learning capability?',
+ 'Extra-courses did',
+ 'certifications',
+ 'workshops',
+ 'reading and writing skills',
+ 'memory capability score',
+ 'Interested subjects',
+ 'interested career area ',
+ 'Type of company want to settle in?',
+ 'Taken inputs from seniors or elders',
+ 'Interested Type of Books',
+ 'Management or Technical',
+ 'hard/smart worker',
+ 'worked in teams ever?',
+ 'Introvert']
+for i in cols:
+         x[i]=x[i].astype('category').cat.codes
 st.write(x)
-st.write(y)
-st.write(x[[4:]])
