@@ -132,7 +132,7 @@ inputdata = {'Logical quotient rating': logic_rate,
 
 features = pd.DataFrame(inputdata,index=[0])
 st.write(features)
-st.write(data.select_dtypes(include=['object']).columns)
-
-st.write(data.info())
-st.write(data.columns)
+x=data.drop("Suggested Job Role",axis=1)
+y=data["Suggested Job Role"]
+st.write(x)
+st.write(y)
