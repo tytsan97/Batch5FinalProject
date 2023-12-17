@@ -69,7 +69,7 @@ else:
          new_work = 1
 st.write(new_work)
 certi = st.selectbox("Certificate",data['certifications'].unique()) 
-data['certifications'']=data['certifications'].astype('category')
+data['certifications']=data['certifications'].astype('category')
 d=dict(enumerate(data['certifications'].cat.categories))
 for key,value in d.items():
     if value == certi:
