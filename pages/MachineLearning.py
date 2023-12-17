@@ -74,7 +74,6 @@ d=dict(enumerate(data['Suggested Job Role'].cat.categories))
 for key,value in d.items():
     if value == certi:
         new_certi=key
-         
 st.write(new_certi)
 wshop = st.selectbox("Workshops",data['workshops'].unique())
 subj = st.selectbox("Interesting Subjects",data['Interested subjects'].unique())
@@ -88,7 +87,7 @@ inputdata = {'Logical quotient rating': logic_rate,
                         'public speaking points': speak_rate,
                         'self-learning capability?': new_self,
                         'Extra-courses did': new_extra,
-                        'certifications_code': certi,
+                        'certifications_code': new_certi,
                         'workshops_code': wshop,
                         'reading and writing skills': new_rdwe,
                         'memory capability score': new_memo,
