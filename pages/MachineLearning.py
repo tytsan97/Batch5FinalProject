@@ -121,12 +121,9 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-            filename = 'dtmodel'
-            with open(filename, 'rb') as f:
-                u = pickle._Unpickler(f)
-                p = u.load()
+            
             st.write(features)        
-            clfres = p.predict(features)    
+            #clfres = p.predict(features)    
             st.subheader("Your suggested job role is")
-            st.write(clfres)
+            st.write(x_train)
          
