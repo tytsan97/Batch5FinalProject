@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import pickle
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
+from joblib import dump, load
 rfmodel=st.sidebar.checkbox('DecisionTree Classification')
 data = pd.read_csv('career.csv')
 if rfmodel: 
@@ -123,9 +122,8 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-            filename = 'dtmodelentropy'                     
-            load_model = pickle.load(open(filename, "rb"))        
-            
+            load_model = load('dttest.joblib')  
+            testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
             dt_pred = load_model.predict(testsdata2)
             st.subheader("Your suggested job role is")
             st.write(dt_pred)        
