@@ -260,7 +260,7 @@ if rfmodel2:
             #dtmodel = DecisionTreeClassifier(criterion='entropy').fit(x_train,y_train)
             #dt_pred = dt_model.predict(features)
             filename = 'dtmodelentropy'
-            load_model = pickle.load(open(filename, "rb"))            
+            load_model = pickle.load(open(filename, 'rb'))            
             testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
             ento = load_model.predict(testsdata2)
             st.subheader("Your suggested job role is")
