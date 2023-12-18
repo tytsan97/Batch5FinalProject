@@ -125,9 +125,9 @@ if rfmodel:
             with open(filename, 'rb') as f:
                 u = pickle._Unpickler(f)
                 p = u.load()
-            testsdata1=pd.get_dummies(features)
-            testsdata2 =  testsdata1.reindex(columns =  x_train.columns, fill_value=0)
-            clfres = p.predict(testsdata2)    
+            
+            
+            clfres = p.predict(features)    
             st.subheader("Your suggested job role is")
             st.write(clfres)
          
