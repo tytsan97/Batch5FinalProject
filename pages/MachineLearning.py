@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-rfmodel= st.sidebar.checkbox('Decision Trees')
+rfmodel= st.sidebar.checkbox('Naive Bayesian Classification')
 data = pd.read_csv('career.csv')
 if rfmodel: 
     with st.form("my_form1"):     
