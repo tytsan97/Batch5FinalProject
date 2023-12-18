@@ -129,7 +129,6 @@ if rfmodel:
                 p = u.load()  
             
             dt_pred = p.predict(features)
-            st.subheader("Your suggested job role is")
-            st.write(dt_pred)        
+            test= pd.DataFrame(dt_pred)
                 
      
