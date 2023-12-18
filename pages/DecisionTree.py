@@ -125,7 +125,7 @@ if rfmodel:
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
             dtmodel = DecisionTreeClassifier(criterion='entropy').fit(x_train,y_train)
             testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
-            dt_pred = dt_model.predict(features)
+            dt_pred = dtmodel.predict(features)
             #filename = 'dtmodelentropy'                     
             #load_model = pickle.load(open(filename, "rb"))        
             
