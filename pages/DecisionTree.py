@@ -127,8 +127,8 @@ if rfmodel:
                 u = pickle._Unpickler(f)
                 
                 p = u.load()  
-            testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
-            dt_pred = p.predict(testsdata2)
+            
+            dt_pred = p.predict(features)
             st.subheader("Your suggested job role is")
             st.write(dt_pred)        
                 
