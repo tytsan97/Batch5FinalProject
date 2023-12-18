@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
 rfmodel= st.sidebar.checkbox('Decision Trees')
 data = pd.read_csv('career.csv')
 if rfmodel: 
@@ -121,9 +122,10 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-            
-            st.write(features)        
+            dtmodel = DecisionTreeClassifier(criterion='entropy').fit(x_train,y_train)
+            dt_pred = dt_model.predict(features)
+            st.write(dt_pred)        
             #clfres = p.predict(features)    
             st.subheader("Your suggested job role is")
-            st.write(x_train)
+            #st.write(x_train)
          
