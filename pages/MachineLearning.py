@@ -11,7 +11,7 @@ if rfmodel:
         st.title('Classify the new career prediction')
         st.subheader("Please Choose all features for predicting good result")
         logic_rate=st.number_input('Pick a number for Logical Rating',1,9)
-        hack_rate = st.number_input('Pick a number for hackathons',1,9)
+        hack_rate = st.number_input('Pick a number for hackathons',0,6)
         code_rate = st.number_input('Pick a number for coding skills rating',1,9)
         speak_rate = st.number_input('Pick a number for public speaking points',1,9)
         self_learn = st.radio("Self Learning Capability:", ['yes', 'no'])
@@ -260,15 +260,9 @@ if rfmodel2:
             #dtmodel = DecisionTreeClassifier(criterion='entropy').fit(x_train,y_train)
             #dt_pred = dt_model.predict(features)
             filename = 'dtmodelentropy'
-            with open(filename, 'rb') as f:
-                u = pickle._Unpickler(f)
-                
-                p = u.load()
-  
-
-            
+            load_model = pickle.load(open(filename, "rb"))            
             testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
-            dt_pred = p.predict(testsdata2)
+            dt_pred = load_model.predict(testsdata2)
             st.subheader("Your suggested job role is")
             st.write(dt_pred)        
                
