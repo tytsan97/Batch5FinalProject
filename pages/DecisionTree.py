@@ -122,7 +122,7 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-            load_model = load('dttest.joblib')  
+            load_model = pickle.load(open(dtest1, "rb"))  
             testsdata2 =  features.reindex(columns =  x_train.columns, fill_value=0)
             dt_pred = load_model.predict(testsdata2)
             st.subheader("Your suggested job role is")
