@@ -127,6 +127,7 @@ if rfmodel:
             dt = dt.fit(x_train,y_train)
             testdata = features.reindex(columns = x_train.columns,fill_value=0)
             dt_pred = dt.predict(testdata)
-            dt_pred
+            st.subheader("Suggest Job Role")
+            st.write(dt_pred)
                 
      
