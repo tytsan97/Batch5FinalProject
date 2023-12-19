@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression 
 from sklearn import metrics
 from sklearn.metrics import classification_report, accuracy_score
-rfmodel=st.sidebar.checkbox('DecisionTree Classification')
+rfmodel=st.sidebar.checkbox('LogisticRegression Classification')
 data = pd.read_csv('career.csv')
 if rfmodel: 
     with st.form("my_form1"):     
@@ -124,7 +124,7 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-            logmodel = DecisionTreeClassifier()
+            logmodel = LogisticRegression()
             logmodel = logmodel.fit(x_train,y_train)
             testdata = features.reindex(columns = x_train.columns,fill_value=0)
             dt_pred = logmodel.predict(testdata)
