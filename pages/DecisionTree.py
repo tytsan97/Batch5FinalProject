@@ -125,8 +125,8 @@ if rfmodel:
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
             dt = DecisionTreeClassifier()
             dt = dt.fit(x_train,y_train)
-            testdata = features.reindex(columns=x_train.columns)
+            testdata = features.reindex(columns = x_train.columns,fill_value=0)
             dt_pred = dt.predict(testdata)
-            st.write(dt_pred)
+            dt_pred
                 
      
