@@ -111,7 +111,7 @@ if rfmodel:
                          'Type of Companay want to settle in?':new_comp,'Taken inputs from seniors or elders':new_snrin,
                          'Interested Type of Books_code': new_book,'Management or Technical': new_metl,
                         'hard/smart worker': new_work,'worked in teams ever?': new_team,'Introvert': new_mbti}                  
-            features = pd.DataFrame(inputdata,index=[0])         
+            features = st.dataframe(inputdata,index=[0])         
             x=data.drop("Suggested Job Role",axis=1)
             y=data["Suggested Job Role"]
             cols= ['self-learning capability?','Extra-courses did',
