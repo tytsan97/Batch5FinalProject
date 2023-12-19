@@ -125,7 +125,7 @@ if rfmodel:
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
             dt = DecisionTreeClassifier(citerion="entropy")
             dt = dt.fit(x_train,y_train)
-            testdata = features.reindex(column=x.columns)
+            testdata = features.reindex(columns=x_train.columns)
             dt_pred = dt.predict(testdata)
             st.write(dt_pred)
                 
