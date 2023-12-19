@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier 
 from joblib import dump, load
 rfmodel=st.sidebar.checkbox('DecisionTree Classification')
 data = pd.read_csv('career.csv')
@@ -122,13 +123,10 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-            filename = 'dtest1'
-            with open(filename, 'rb') as f:
-                u = pickle._Unpickler(f)
-                
-                p = u.load()  
-            
-            dt_pred = p.predict(features)
-            test= pd.DataFrame(dt_pred)
+            dt = DecisionTreeClassifier(citerion="entropy")
+            dt = dt.fit(x_train,y_train)
+            testdata = features.reindex(column=x.columns)
+            dt_pred = dt.predict(testdata)
+            st.write(dt_pred)
                 
      
