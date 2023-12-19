@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import pickle
+
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier 
-from joblib import dump, load
+
 rfmodel=st.sidebar.checkbox('DecisionTree Classification')
 data = pd.read_csv('career.csv')
 if rfmodel: 
@@ -111,7 +111,7 @@ if rfmodel:
                          'Type of Companay want to settle in?':new_comp,'Taken inputs from seniors or elders':new_snrin,
                          'Interested Type of Books_code': new_book,'Management or Technical': new_metl,
                         'hard/smart worker': new_work,'worked in teams ever?': new_team,'Introvert': new_mbti}                  
-            features = st.dataframe(inputdata)         
+            features = pd.DataFrame(inputdata)         
             x=data.drop("Suggested Job Role",axis=1)
             y=data["Suggested Job Role"]
             cols= ['self-learning capability?','Extra-courses did',
