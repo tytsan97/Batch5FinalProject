@@ -127,6 +127,6 @@ if rfmodel:
             dt = dt.fit(x_train,y_train)
             testdata = features.reindex(columns=x_train.columns)
             dt_pred = dt.predict(testdata)
-            st.write(dt_pred)
+            st.dataframe(dt_pred)
                 
      
