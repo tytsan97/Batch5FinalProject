@@ -123,7 +123,7 @@ if rfmodel:
             for i in cols:
                 x[i]=x[i].astype('category').cat.codes
             x_train, x_test, y_train, y_test = train_test_split(x,y,test_size=0.25, random_state=25)
-            dt = DecisionTreeClassifier(citerion="entropy")
+            dt = DecisionTreeClassifier()
             dt = dt.fit(x_train,y_train)
             testdata = features.reindex(columns=x_train.columns)
             dt_pred = dt.predict(testdata)
